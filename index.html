@@ -20,14 +20,14 @@
         <div class="main">
             <img src="./icons/google.png" alt="Google">
             <div class="searchbox">
-                <input type="text" class="search">
+                <input type="text" class="search" id="search">
                 <div class="icons">
                     <div><img src="./icons/search.png"></div>
                     <div><img src="./icons/mic.png"></div>
                 </div>
             </div>
             <div class="buttons">
-                <button>Google Search</button>
+                <button onclick="search(document.getElementById('search').value)">Google Search</button>
                 <button>I'm Felling Lucky</button>
             </div>
             <div class="lang">
@@ -50,5 +50,10 @@
             </div>
         </div>
     </section>
+<script>
+    function search (query) {
+    window.location.href = `https://www.google.com/search?q= + ${query}`;
+}
+</script>
 </body>
 </html>
